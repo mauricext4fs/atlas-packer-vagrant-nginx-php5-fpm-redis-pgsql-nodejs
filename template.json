@@ -12,6 +12,7 @@
             "type": "shell",
             "scripts": [
                 "scripts/base.sh",
+                "scripts/apt.postgresql.org.sh",
                 "scripts/virtualbox.sh",
                 "scripts/vmware.sh",
                 "scripts/vagrant.sh",
@@ -97,7 +98,7 @@
             "artifact_type": "vagrant.box",
             "metadata": {
                 "provider": "vmware_desktop",
-                "version": "0.0.1"
+                "version": "0.0.2"
             }
         },
         {
@@ -107,7 +108,7 @@
             "artifact_type": "vagrant.box",
             "metadata": {
                 "provider": "virtualbox",
-                "version": "0.0.1"
+                "version": "0.0.2"
             }
         }]
     ]
