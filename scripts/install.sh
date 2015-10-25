@@ -9,6 +9,7 @@ apt-get install -y python-software-properties
 add-apt-repository ppa:ondrej/php5-5.6
 add-apt-repository ppa:chris-lea/node.js
 add-apt-repository ppa:rwky/redis
+add-apt-repository ppa:nginx/stable
 /vagrant/bin/apt.postgresql.org.sh
 apt-get update && apt-get upgrade
 apt-get install -y g++
