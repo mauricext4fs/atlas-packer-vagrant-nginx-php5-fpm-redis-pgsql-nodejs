@@ -1,6 +1,7 @@
 # Specific installation script for that host
 do-release-upgrade -f DistUpgradeViewNonInteractive
 apt-get update
+setenforce 0
 apt-get install -y nginx
 if ! [ -L /var/www ]; then
   rm -rf /var/www
@@ -25,7 +26,9 @@ apt-get install -y postgresql-9.4
 apt-get install -y nodejs
 apt-get install -y tcl
 apt-get install -y git
-
+setenforce 0
+curl --silent --location https://deb.nodesource.com/setup_0.12
+apt-get install --yes nodejs
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
 npm install -g nodemon
+setenforce 0
