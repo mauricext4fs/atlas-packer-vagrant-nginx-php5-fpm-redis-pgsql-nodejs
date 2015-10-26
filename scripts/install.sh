@@ -1,4 +1,5 @@
 # Specific installation script for that host
+do-release-upgrade
 apt-get update
 apt-get install -y nginx
 if ! [ -L /var/www ]; then
