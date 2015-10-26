@@ -7,10 +7,11 @@ if ! [ -L /var/www ]; then
   ln -fs /vagrant /var/www
 fi
 apt-get install -y python-software-properties
-add-apt-repository ppa:ondrej/php5-5.6
-add-apt-repository ppa:chris-lea/node.js
-add-apt-repository ppa:rwky/redis
-add-apt-repository ppa:nginx/stable
+apt-get install software-properties-common
+add-apt-repository -y ppa:ondrej/php5-5.6
+add-apt-repository -y ppa:chris-lea/node.js
+add-apt-repository -y ppa:rwky/redis
+add-apt-repository -y ppa:nginx/stable
 /vagrant/bin/apt.postgresql.org.sh
 apt-get update && apt-get upgrade
 apt-get install -y g++
@@ -22,12 +23,18 @@ apt-get install -y php-pear
 apt-get install -y php5-imagick
 apt-get install -y php5-json
 apt-get install -y postgresql-9.4
+apt-get install -y ruby ruby-dev
 apt-get install -y nodejs
 apt-get install -y tcl
 apt-get install -y git
+
 #setenforce 0
 #curl --silent --location https://deb.nodesource.com/setup_0.12
 #apt-get install --yes nodejs
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-#npm install -g nodemon
+npm install -g nodemon
 #setenforce 0
+# install compass
+gem install foundation
+gem install compass
+gem install sass
