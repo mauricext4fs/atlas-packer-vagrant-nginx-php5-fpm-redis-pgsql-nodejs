@@ -1,5 +1,4 @@
 # Specific installation script for that host
-do-release-upgrade -f DistUpgradeViewNonInteractive
 apt-get update
 setenforce 0
 apt-get install -y nginx
