@@ -164,3 +164,6 @@ You can now start installing packages from apt.postgresql.org.
 Have a look at https://wiki.postgresql.org/wiki/Apt for more information;
 most notably the FAQ at https://wiki.postgresql.org/wiki/Apt/FAQ
 EOF
+
+
+apt-get install -y postgresql-9.4
