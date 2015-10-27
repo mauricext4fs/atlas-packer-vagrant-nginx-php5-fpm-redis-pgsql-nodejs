@@ -39,3 +39,12 @@ npm install -g nodemon
 gem install foundation
 gem install compass
 gem install sass
+
+#Redis-server with init script
+wget -O /etc/init.d/redis-server https://gist.github.com/lsbardel/257298/raw/d48b84d89289df39eaddc53f1e9a918f776b3074/redis-server-for-init.d-startup
+chmod 755 /etc/init.d/redis-server
+update-rc.d redis-server defaults
+chown redis /var/log/redis/redis-server.log
+
+# PHP-fpm auto-start
+update-rc.d php5-fpm defaults
