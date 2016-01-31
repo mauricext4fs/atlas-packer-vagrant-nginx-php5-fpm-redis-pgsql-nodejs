@@ -56,5 +56,9 @@ chmod 755 /etc/init.d/redis-server
 update-rc.d redis-server defaults
 chown redis /var/log/redis/redis-server.log
 
+# Deactivating the current startup script
+mv /etc/init/redis-server.conf /etc/init_redis-server.conf.orig
+
+
 # PHP-fpm auto-start
 update-rc.d php5-fpm defaults
